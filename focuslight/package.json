@@ -1,0 +1,36 @@
+{
+  "name": "cowtransfer-wallpaper-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./config/webpack/webpack.prod.js",
+    "dev": "webpack-dev-server --config ./config/webpack/webpack.dev.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^3.4.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "url-loader": "^3.0.0",
+    "vue-loader": "^15.8.3",
+    "vue-property-decorator": "^8.3.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "vue": "^2.6.11"
+  }
+}

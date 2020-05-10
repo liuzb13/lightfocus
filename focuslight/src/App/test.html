@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      opacity: 0.3;
+      border: 1px solid grey;
+      margin: 20px;
+    }
+    img{
+      position: absolute;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+<img src="../assets/image/bck.png">
+  <canvas class="mycanvas" style="width: 300px; height: 150px;"></canvas>
+
+  <script>
+    var ctx = null;
+    var mouseX = 50;
+    var mouseY = 50;
+    function rem() {
+
+
+
+
+   
+//圆形空白的
+      ctx.beginPath();
+      ctx.fillStyle = "red"; 
+      ctx.arc(mouseX, mouseY, 30, 0, 2 * Math.PI);
+      ctx.fill();
+      
+      ctx.globalCompositeOperation = 'source-out';
+
+//背景色的地方
+      ctx.fillStyle = "grey";
+      ctx.fillRect(0, 0, 300, 150);
+    
+
+
+      requestAnimationFrame(rem);
+    }
+    window.onload = function () {
+      var c = document.getElementsByClassName("mycanvas")[0];
+      ctx = c.getContext("2d");
+      rem();
+    }
+
+  </script>
+</body>
+
+</html>
